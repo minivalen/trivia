@@ -23,15 +23,6 @@ let questions = [
  
  },
  {
-     question: "¿Cómo se llama la aleta que sirve para que el animal mantenga el equilibrio?",
-     imgSrc: "asdf/.png",
-     choiceA: "Aleta caudal",
-     choiceB: "Aleta dorsal",
-     choiceC: "Aleta ventral",
-     choiceD:"Aleta pectoral",
-     correct : "Aleta dorsal"
- },
- {
      question: "¿Cómo se llaman los órganos mediante los cuales respiran los peces?",
      imgSrc: "asdf/.png",
      choiceA: "Pulmones",
@@ -41,16 +32,6 @@ let questions = [
      correct : "Branquias"
  
  },
- {
-     question: "¿Cuál de estas frases sobre las tortugas marinas es falsa?",
-     imgSrc :"asdf/.png",
-     choiceA :"Son ovíparas, nacen de huevos",
-     choiceB :"Tienen dientes",
-     choiceC :"Son reptiles",
-     choiceD :"Tienen caparazon",
-     correct : "Tienen dientes"
- 
- } 
  ];
 
  questions.forEach((el, index) => {
@@ -58,22 +39,21 @@ let questions = [
     div.className = 'question ' + (index + 1);
     div.innerHTML = `
         <h3>${el.question}</h3>
-        //crear un boton sustituir span. usar el score con condicionales o valores.
-        <span>${el.choiceA}</span>
-        <span>${el.choiceB}</span>
-        <span>${el.choiceC}</span>
-        <span>${el.choiceD}</span>`
+        <button>${el.choiceA}</button>
+        <button>${el.choiceB}</button>
+        <button>${el.choiceC}</button>
+        <button>${el.choiceD}</button>`
     document.querySelector('#quiz2').appendChild(div)
 })
-const scoreContainer (){
+/*const scoreContainer (){
 
-}
-const results (questions) {
+}*/
+/*const results (questions) {
         if (answers === true) {
           return scoreContainer +1;
         }
     
       };
       
-    
+  */  
 
