@@ -50,16 +50,38 @@ let questions = [
  
  } 
  ];
-
- questions.forEach((el, i) => {
-    const div = document.createElement('div');
-    div.className = 'question ' + (i + 1);
+/*questions.forEach((el, i) => {
+    const answers = document.addEventListener(onClick);
+    div.className = ' ' + (i + 1);
     div.innerHTML = `
         <h3>${el.question}</h3>
-        <span>${el.choiceA}</span>
-        <span>${el.choiceB}</span>
-        <span>${el.choiceC}</span>
-        <span>${el.choiceD}</span>`
+        <buttom>${el.choiceA}</buttom>
+        <buttom>${el.choiceB}</buttom>
+        <buttom>${el.choiceC}</buttom>
+        <buttom>${el.choiceD}</buttom>`
+    document.querySelector('#quiz2').appendChild(div)
+
+})*/
+questions.forEach((el, i) => {
+    const div = document.createElement('div');
+    div.className = 'question n' + (i + 1);
+    div.innerHTML = `
+        <h3>${el.question}</h3>
+        <button class= "btn ${i}">${el.choiceA}</button>
+        <button class= "btn ${i}">${el.choiceB}</button>
+        <button class= "btn ${i}">${el.choiceC}</button>
+        <button class= "btn ${i}">${el.choiceD}</button>`
     document.querySelector('#quiz2').appendChild(div)
 })
-//<div id="results"> </div>
+let correctAnswers = 0;
+
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const index = parseInt(btn.classList[1])
+        const correct = questions[index].correct
+        if (btn.innerHTML === correct) {
+            correctAnswers++
+        }
+        document.querySelector(".question.n" + (index + 1)).classList.add("hidden")
+    })
+})
