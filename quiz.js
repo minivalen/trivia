@@ -1,13 +1,3 @@
-const topicA = document.querySelector('#topicA');
-const topicB = document.querySelector('#topicB')
-topicA.addEventListener('click', () => {
-    console.log('clickEvent de A')
-})
-topicB.addEventListener('click', () => {
-    console.log('clickEvent de B')
-})
-console.log(topicA)
-
 /** las preguntas */
 
 let questions = [
