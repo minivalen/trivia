@@ -53,14 +53,27 @@ let questions = [
  } 
  ];
 
- questions.forEach((el, i) => {
+ questions.forEach((el, index) => {
     const div = document.createElement('div');
-    div.className = 'question ' + (i + 1);
+    div.className = 'question ' + (index + 1);
     div.innerHTML = `
         <h3>${el.question}</h3>
+        //crear un boton sustituir span. usar el score con condicionales o valores.
         <span>${el.choiceA}</span>
         <span>${el.choiceB}</span>
         <span>${el.choiceC}</span>
         <span>${el.choiceD}</span>`
     document.querySelector('#quiz2').appendChild(div)
 })
+const scoreContainer (){
+
+}
+const results (questions) {
+        if (answers === true) {
+          return scoreContainer +1;
+        }
+    
+      };
+      
+    
+
