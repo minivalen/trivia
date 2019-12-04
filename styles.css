@@ -16,9 +16,9 @@
     padding: 0px 53px;
 }
 .topic:hover {
-    background-color: #87daff;
+    background-color: #f09197ad;
     color: #ffffff;
-    border-color: #87dafe;
+    border-color: #ffffff;
 }
 
 body, html {
@@ -32,4 +32,9 @@ body > div {
     position: relative;
 }
 
-#start {position: absolute;top: -97px;font-size: 26px;}
+.container {
+    width: 200px;
+    height: 120px;
+}
+
+#start {position: absolute;top: -130px;font-size: 26px;}
