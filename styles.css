@@ -37,4 +37,9 @@ body > div {
     height: 120px;
 }
 
-#start {position: absolute;top: -130px;font-size: 26px;}
+#start {
+    position: absolute;
+    top: -130px;
+    font-size: 26px;
+    font-weight: bold;
+}

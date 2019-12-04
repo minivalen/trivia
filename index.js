@@ -4,9 +4,10 @@ console.log(name);
 const topicA = document.querySelector('#topicA');
 const topicB = document.querySelector('#topicB');
 topicA.addEventListener('click', () => {
-    document.location.href = './marine.html';
+    document.location.href = './marine.html'
 });
 topicB.addEventListener('click', () => {
     console.log('clickEvent de B')
+    document.location.href = './terrestre.html'
 })
 console.log(topicA)
