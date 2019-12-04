@@ -62,3 +62,4 @@ let questions = [
         <span>${el.choiceD}</span>`
     document.querySelector('#quiz2').appendChild(div)
 })
+//<div id="results"> </div>

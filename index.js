@@ -10,4 +10,8 @@ topicB.addEventListener('click', () => {
     console.log('clickEvent de B')
     document.location.href = './terrestre.html'
 })
-console.log(topicA)
+console.log(topicA);
+function onClick() {
+    document.location.href = './marine.html';
+}
+//mostrar resultados 1 de 5
