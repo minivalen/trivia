@@ -34,26 +34,29 @@ let questions = [
  },
  ];
 
- questions.forEach((el, index) => {
+ questions.forEach((el, i) => {
     const div = document.createElement('div');
-    div.className = 'question ' + (index + 1);
+    div.className = 'question n' + (i + 1);
     div.innerHTML = `
         <h3>${el.question}</h3>
-        <button>${el.choiceA}</button>
-        <button>${el.choiceB}</button>
-        <button>${el.choiceC}</button>
-        <button>${el.choiceD}</button>`
+        <button class= "btn ${i}">${el.choiceA}</button>
+        <button class= "btn ${i}">${el.choiceB}</button>
+        <button class= "btn ${i}">${el.choiceC}</button>
+        <button class= "btn ${i}">${el.choiceD}</button>`
     document.querySelector('#quiz2').appendChild(div)
 })
-/*const scoreContainer (){
 
-}*/
-/*const results (questions) {
-        if (answers === true) {
-          return scoreContainer +1;
+let correctAnswers = 0;
+
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const index = parseInt(btn.classList[1])
+        const correct = questions[index].correct
+        if (btn.innerHTML === correct) {
+            correctAnswers++
         }
-    
-      };
-      
-  */  
+        document.querySelector(".question.n" + (index + 1)).classList.add("hidden")
+    })
+})
+
 
