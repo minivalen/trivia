@@ -107,3 +107,7 @@ body > div {
   display: grid;
   gap: 20px;
 }
+
+.final {
+    margin-top: 56px;
+}

@@ -68,8 +68,15 @@ document.querySelectorAll(".btn").forEach(btn => {
     <span>${questions[0].question} ${questions[0].correct}</span> </br>
     <span>${questions[1].question} ${questions[1].correct}</span> </br>
     <span>${questions[2].question} ${questions[2].correct}</span>
-    </div>`;
+    </div>
+    <button class="btn final">Volver a Jugar</button>
+    `;
+    // btn for playing again
+    results.querySelector('.btn.final').addEventListener('click', () => {
+        document.location.href = './index.html'
+    }) 
 
     document.querySelector(".question.n" + (index + 1)).classList.add("hidden");
   });
 });
+
