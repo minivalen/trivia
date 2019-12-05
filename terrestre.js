@@ -29,39 +29,8 @@ let questions = [
      choiceD:"Vaca",
      correct : "Cerdo"
  },
- {
-     question: "¿Cual es el animal (terrestre) mas grande del mundo?",
-     imgSrc: "asdf/.png",
-     choiceA: "Ballena Azul",
-     choiceB: "Rinoceronte",
-     choiceC: "Jirafa",
-     choiceD: "Elefante",
-     correct : "Elefante"
- 
- },
- {
-     question: "¿Como se llama el insecto de esta foto?",
-     imgSrc :"asdf/.png",
-     choiceA :"Son ovíparas, nacen de huevos",
-     choiceB :"Tienen dientes",
-     choiceC :"Son reptiles",
-     choiceD :"Tienen caparazon",
-     correct : "Tienen dientes"
- 
- } 
  ];
-/*questions.forEach((el, i) => {
-    const answers = document.addEventListener(onClick);
-    div.className = ' ' + (i + 1);
-    div.innerHTML = `
-        <h3>${el.question}</h3>
-        <buttom>${el.choiceA}</buttom>
-        <buttom>${el.choiceB}</buttom>
-        <buttom>${el.choiceC}</buttom>
-        <buttom>${el.choiceD}</buttom>`
-    document.querySelector('#quiz2').appendChild(div)
 
-})*/
 questions.forEach((el, i) => {
     const div = document.createElement('div');
     div.className = 'question n' + (i + 1);
@@ -75,6 +44,11 @@ questions.forEach((el, i) => {
 })
 let correctAnswers = 0;
 
+let answersQuestions = 0;
+
+
+const score = document.getElementById("score");
+
 document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const index = parseInt(btn.classList[1])
@@ -82,6 +56,15 @@ document.querySelectorAll('.btn').forEach(btn => {
         if (btn.innerHTML === correct) {
             correctAnswers++
         }
+        answersQuestions++
+        
         document.querySelector(".question.n" + (index + 1)).classList.add("hidden")
+        score.innerHTML = `has acumulado ${answersQuestions} puntos` 
+
     })
 })
+ 
+console.log(questions.length);
+
+
+
