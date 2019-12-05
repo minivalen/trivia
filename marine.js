@@ -55,6 +55,7 @@ document.querySelectorAll('.btn').forEach(btn => {
         if (btn.innerHTML === correct) {
             correctAnswers++
         }
+        console.log(document.querySelector(".question.n" + (index + 1)))
         document.querySelector(".question.n" + (index + 1)).classList.add("hidden")
     })
 })

@@ -1,7 +1,7 @@
 let questions = [
 
     {
-     question: "¿Que pajaro pone el huevo mas peque;o?",
+     question: "¿Que pajaro pone el huevo mas pequeño?",
  
      choiceA :"Turpial",
      choiceB :"Avestruz",

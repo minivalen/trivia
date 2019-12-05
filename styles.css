@@ -1,14 +1,15 @@
 .hidden {
-    display: none;
+    display: none !important;
 }
 .topic {
     cursor: pointer;
     user-select: none;
-    border: 1px solid #d3d3d3;
+    border: 1px solid #ff518c;
     padding: 15px;
     border-radius: 24px;
     margin: 0px 17px;
     font-size: 24px;
+    color: #ff518c;
     transition: all .3s;
 }
 #topics {
@@ -28,18 +29,56 @@ body, html {
 }
 
 body > div {
-    place-self: center;
     position: relative;
+    place-self: center;
+    place-items: center;
 }
 
 #start {
     position: absolute;
-    top: -136px;
-    font-size: 25px;
+    top: -134px;
+    font-size: 22px;
+    left: 29px;
     font-weight: bold;
+    color: #ffafca;
+    width: fit-content;
+    word-break: unset;
 }
 
 .container > img {
     width: 274px;
     margin: -17px;
+}
+
+.btn {
+    background-color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ff518c;
+    padding: 15px;
+    border-radius: 24px;
+    margin: 0px 17px;
+    font-size: 24px;
+    transition: all;
+    width: 384px;
+    justify-self: center;
+    color: #ff518c;
+}
+
+.question > h3 {
+    font-size: 25px;
+    padding: 8px;
+    margin: 25px;
+    justify-self: center;
+    color: #ffafca;
+}
+
+.btn:hover{
+    background-color: #f09197ad;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.question {
+    display: grid;
+    gap: 20px;
 }
