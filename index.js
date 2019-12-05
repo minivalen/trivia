@@ -3,7 +3,7 @@ const name = prompt('Introduce tu nombre');
 // display topic buttons
 document.querySelector('#topics').classList.remove('hidden');
 // display welcome message
-document.querySelector('#start').innerHTML = `¡Bienvenid@ ${name}!, escoge un tema para comenzar a jugar`;
+document.querySelector('#start').innerHTML = `¡Bienvenid@ ${name}!, escoge un tema para comenzar a jugar :)`;
 console.log(name);
 const topicA = document.querySelector('#topicA');
 const topicB = document.querySelector('#topicB');
